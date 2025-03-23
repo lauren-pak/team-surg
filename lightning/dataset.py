@@ -14,8 +14,8 @@ from matplotlib.cm import ScalarMappable
 from torch.utils.data import IterableDataset, get_worker_info
 
 import copy
-from skspatial.objects import Point, Vector
-import pickle5 as pickle 
+#from skspatial.objects import Point, Vector
+import pickle
 import matplotlib.colors as mcolors
 from tqdm import tqdm 
 from joints import (pelvic_indices, arm_indices, head_indices, thorax_indices, leg_indices, spine_indices,

@@ -6,12 +6,22 @@ import numpy as np
 from metrics import get_metrics_multiclass, get_metrics
 import os 
 import pandas as pd
-import pickle5 as pickle 
+import pickle 
 from net import MlpMixer
 from CNN3D import C3D
 import torch.nn as nn
 from dataset import MixerDataset, IterativeDataset
 import torch.distributed as dist
+
+
+
+#loss function ->Loss Function → A mathematical function that tells the model how wrong its predictions are. This model uses Binary Cross Entropy Loss (BCELoss) for classification.
+#Activation Functions → Functions like softmax help make predictions more interpretable.
+#Backpropagation → A process where the network learns by updating weights using gradients.
+
+"""MLP MIXER:
+    A newer type of neural network that processes images without convolution.
+    It mixes information across spatial (joint positions) and temporal (motion over time) dimensions."""
 
 
 def get_task(args):

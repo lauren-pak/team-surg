@@ -11,11 +11,11 @@ LIGHTNING_CKPT_PATH = 'lightning_logs/version_0/checkpoints/'
 LIGHTNING_TB_PATH = 'lightning_logs/version_0/'
 LIGHTNING_METRICS_PATH = 'lightning_logs/version_0/metrics.csv'
 
-
+#Creates the path where model checkpoints will be saved.
 def get_ckpt_dir(save_path, exp_name):
     return os.path.join(save_path, exp_name, "ckpts")
 
-
+#Saves model checkpoints in the experiment folder.
 def get_ckpt_callback(save_path, exp_name, filename):
     ckpt_dir = os.path.join(save_path, exp_name, "ckpts")
     return ModelCheckpoint(dirpath=ckpt_dir,
@@ -26,6 +26,7 @@ def get_ckpt_callback(save_path, exp_name, filename):
                            mode='max')
 
 
+#Stops training if the validation F1-score does not improve for patience epochs.
 def get_early_stop_callback(patience=10):
     return EarlyStopping(monitor='val_f1', #TODO - monitor metric
                          patience=patience,
@@ -33,8 +34,11 @@ def get_early_stop_callback(patience=10):
                          mode='max')
 
 
+#Loggers in PyTorch Lightning are used to record and track experiments. They help log metrics (like accuracy, loss, F1 score, etc.), model checkpoints, and hyperparameters so you can analyze your training progress later.
+
 def get_logger(save_path="", exp_name="", test=False, wandb_hps=None, 
                 project="", log_exp_name=""):
+    
     #Create logging params and save paths 
     if not wandb_hps:
         wandb_hps = {} 
@@ -49,7 +53,11 @@ def get_logger(save_path="", exp_name="", test=False, wandb_hps=None,
     tt_logger = CSVLogger(save_dir=exp_dir,
                           name='lightning_logs',
                           version="0")
+    
+    #creates weights and biases logger
     wandb_logger = WandbLogger(project=project, name=log_exp_name, save_dir=wandb_test_save_path)
+    
+    #If running in a distributed (CHECK WHAT A DISTRIBUTED SETTING IS)setting, it updates hyperparameters in W&B
     if dist.is_initialized() and dist.get_rank() != 0:
         wandb_logger.experiment.config.update(wandb_hps, allow_val_change=True)
     if test:
@@ -57,6 +65,8 @@ def get_logger(save_path="", exp_name="", test=False, wandb_hps=None,
     else:
         return [tt_logger, wandb_logger]
 
+
+#Args is a subclass of Python's dict that allows accessing dictionary keys as attributes.
 class Args(dict):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -77,6 +87,7 @@ class Args(dict):
             AttributeError("No such attribute: " + name)
 
 
+#Gets paths for saving logs, metrics, and TensorBoard files.
 def init_exp_folder(args):
     save_dir = os.path.abspath(args.get("save_dir"))
     exp_name = args.get("exp_name")
@@ -86,11 +97,12 @@ def init_exp_folder(args):
     global_tb_path = args.get("tb_path")
     global_tb_exp_path = join(global_tb_path, exp_name)
 
-    # init exp path
+    # init exp path - creating a folder
     if os.path.exists(exp_path):
         raise FileExistsError(f"Experiment path [{exp_path}] already exists!")
     os.makedirs(exp_path, exist_ok=True)
 
+    #create a directory for TensorBoard Logs - WHAT IS TENSORBOARDS
     os.makedirs(global_tb_path, exist_ok=True)
     if os.path.exists(global_tb_exp_path):
         raise FileExistsError(f"Experiment exists in the global "
@@ -98,6 +110,7 @@ def init_exp_folder(args):
     os.makedirs(global_tb_path, exist_ok=True)
 
     # dump hyper-parameters/arguments
+    #Saves experiment hyperparameters in args.json.
     with open(join(save_dir, exp_name, "args.json"), "w") as f:
         json.dump(args, f)
 

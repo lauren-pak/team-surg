@@ -50,7 +50,7 @@ def detect_collisions(frames, radius, velocity_threshold):
     prev_pelvis = None  # Store pelvis positions from the previous frame
     prev_trackers = None  # Store trackers from the previous frame
 
-    for frame_idx, frame in enumerate(frames):
+    for frame_idx, frame in enumerate(frames): #for each frame
         frame_collisions_i = 0 
         joints3d = frame['joints3d']
         trackers = frame['trackers']
@@ -61,7 +61,7 @@ def detect_collisions(frames, radius, velocity_threshold):
 
         # Calculate walking status for each person
         if frame_idx > 0:
-            for i, tracker in enumerate(trackers):
+            for i, tracker in enumerate(trackers): #tracker iterating - per single person
                 # If the tracker existed in the previous frame, calculate velocity and check walking status
                 if prev_trackers and tracker in prev_trackers:
                     velocity = calculate_velocity(prev_pelvis[prev_trackers.index(tracker)], pelvis[i])
