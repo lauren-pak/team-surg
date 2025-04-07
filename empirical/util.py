@@ -4,6 +4,7 @@ import numpy as np
 import pickle
 import io
 from tqdm import tqdm
+import numpy as np
 
 def matches_blackbox_persp(file_path):
     try:
@@ -93,7 +94,7 @@ Returns: padded tensor of shape (p_max, j, 3)
 """
 def apply_padding(frame_at_joints3d, p_max = 20, j = 127):
     p_actual = frame_at_joints3d.shape[0]
-
+    sh = np.shape(p_actual)
     # Move tensor to CPU if it's on CUDA
     if isinstance(frame_at_joints3d, torch.Tensor):
         frame_at_joints3d = frame_at_joints3d.detach().cpu().numpy()

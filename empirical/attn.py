@@ -108,3 +108,7 @@ def process_files(folder_path, debug=False):
 
 if __name__ == "__main__":
     print("starting")
+
+
+dataset = read_pickle("empirical/joint_out/frame_000450.pkl")
+data, start_frames, total_frames = process_files(dataset)
