@@ -1,0 +1,44 @@
+{
+  "os": "macOS-15.3.2-arm64-arm-64bit",
+  "python": "CPython 3.11.8",
+  "startedAt": "2025-04-28T08:01:42.623138Z",
+  "program": "/Users/laurenpak/Desktop/Coding/GitHub/team-surg/empirical/wandbsetup.py",
+  "codePath": "empirical/wandbsetup.py",
+  "git": {
+    "remote": "https://github.com/lauren-pak/team-surg.git",
+    "commit": "e07dc520b412d52d6b30da6f3509bc982888327d"
+  },
+  "email": "miss.lauren.pak@gmail.com",
+  "root": "/Users/laurenpak/Desktop/Coding/GitHub/team-surg",
+  "host": "Laurens-MacBook-Air.local",
+  "executable": "/usr/local/bin/python3",
+  "codePathLocal": "empirical/wandbsetup.py",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "245107195904",
+      "used": "220388945920"
+    },
+    "/System/Volumes/Data": {
+      "total": "245107195904",
+      "used": "220388945920"
+    }
+  },
+  "memory": {
+    "total": "8589934592"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 8
+  },
+  "apple": {
+    "name": "Apple M2",
+    "ecpuCores": 4,
+    "pcpuCores": 4,
+    "gpuCores": 8,
+    "memoryGb": 8,
+    "swapTotalBytes": "6442450944",
+    "ramTotalBytes": "8589934592"
+  }
+}

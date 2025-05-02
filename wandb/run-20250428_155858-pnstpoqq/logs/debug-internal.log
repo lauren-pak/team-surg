@@ -1,0 +1,8 @@
+{"time":"2025-04-28T15:58:58.69645+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/laurenpak/Desktop/Coding/GitHub/team-surg/wandb/run-20250428_155858-pnstpoqq/logs/debug-core.log"}
+{"time":"2025-04-28T15:58:59.142886+08:00","level":"INFO","msg":"created new stream","id":"pnstpoqq"}
+{"time":"2025-04-28T15:58:59.142934+08:00","level":"INFO","msg":"stream: started","id":"pnstpoqq"}
+{"time":"2025-04-28T15:58:59.142959+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"pnstpoqq"}
+{"time":"2025-04-28T15:58:59.143342+08:00","level":"INFO","msg":"handler: started","stream_id":"pnstpoqq"}
+{"time":"2025-04-28T15:58:59.143376+08:00","level":"INFO","msg":"sender: started","stream_id":"pnstpoqq"}
+{"time":"2025-04-28T15:58:59.367963+08:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-04-28T15:58:59.368049+08:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: returned error 404: {\"data\":{\"upsertBucket\":null},\"errors\":[{\"message\":\"entity jassl-team-surg not found during upsertBucket\",\"path\":[\"upsertBucket\"]}]}"}
