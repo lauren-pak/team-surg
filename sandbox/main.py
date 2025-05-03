@@ -5,7 +5,7 @@ import torch
 from util import init_exp_folder, Args, get_ckpt_callback, get_early_stop_callback, get_logger
 from model import get_task, load_task
 import json 
-import pickle5 as pickle 
+import pickle
 
 """ 
 - Number of MLP blocks
@@ -16,7 +16,7 @@ import pickle5 as pickle
 - Trying out solely 3D joints 
 """
 
-def train(save_dir="/pasteur/u/bencliu/baseline/experiments/simulation/mixer_results",
+def train(save_dir="/Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results",
           exp_name="test_1",
           gpus=1, 
           pretrained=True,
@@ -26,13 +26,13 @@ def train(save_dir="/pasteur/u/bencliu/baseline/experiments/simulation/mixer_res
           max_epochs=100,
           patience=50,
           limit_train_batches=1.0,
-          tb_path="/pasteur/u/bencliu/baseline/experiments/simulation/mixer_results/tb", 
+          tb_path="/Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results/tb", 
           loss_fn="BCE",
           learn_rate=1e-4,
           batch_size=16,
           optimizer="Adam",
           dataset_path="", 
-          proj_name="hmr-mixer", 
+          proj_name="team-surg", 
           weight_decay=0, 
           embedd_dim=381,
           seq_len=50, 
@@ -53,8 +53,7 @@ def train(save_dir="/pasteur/u/bencliu/baseline/experiments/simulation/mixer_res
     logger = get_logger(save_dir, exp_name, wandb_hps=wandb_hps, project=proj_name)
     if gpus > 1:
         accelerator='ddp'
-    trainer = Trainer(gpus=gpus,
-                      accelerator=accelerator,
+    trainer = Trainer(accelerator=accelerator,
                       logger=logger,
                       callbacks=[get_early_stop_callback(patience),
                                  get_ckpt_callback(save_dir, exp_name, "ckpt")],
@@ -72,7 +71,7 @@ def train(save_dir="/pasteur/u/bencliu/baseline/experiments/simulation/mixer_res
 def test(ckpt_path=None,
          ckpt_suffix="ckpt.ckpt",
          exp_dir_path="", 
-         proj_name="hmr-mixer", 
+         proj_name="team-surg", 
          new_model=True,
          log_exp_name="",
          save_error_analysis=True,
@@ -108,7 +107,7 @@ def test(ckpt_path=None,
     task = load_task(ckpt_path, **args_dict) 
     trainer.test(task)
 
-def train_wrapper(save_dir="/pasteur/u/bencliu/baseline/experiments/simulation/mixer_results",
+def train_wrapper(save_dir="/Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results",
           exp_name="test_1",
           gpus=1, 
           pretrained=True,
@@ -118,13 +117,13 @@ def train_wrapper(save_dir="/pasteur/u/bencliu/baseline/experiments/simulation/m
           max_epochs=200,
           patience=40,
           limit_train_batches=1.0,
-          tb_path="/pasteur/u/bencliu/baseline/experiments/simulation/mixer_results/tb", 
+          tb_path="/Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results/tb", 
           loss_fn="BCE",
           learn_rate=5e-4,
           batch_size=16,
           optimizer="Adam",
           dataset_path="", 
-          proj_name="hmr-mixer", 
+          proj_name="team-surg", 
           weight_decay=0, 
           embedd_dim=381,
           seq_len=50, 

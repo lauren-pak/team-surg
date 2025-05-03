@@ -1,0 +1,29 @@
+{
+  "os": "macOS-15.3.2-arm64-arm-64bit",
+  "python": "CPython 3.11.8",
+  "startedAt": "2025-05-03T00:31:43.274386Z",
+  "args": [
+    "train",
+    "--dataset_path",
+    "./action_dataset_joints_leg_sampled_5.pkl",
+    "--seq_len",
+    "5",
+    "--embedd_dim",
+    "84",
+    "--batch_size",
+    "32",
+    "--exp_name",
+    "abl_seq_pelvis_arm_head_thorax_spine_leg_weighted_seq_"
+  ],
+  "program": "/Users/laurenpak/Desktop/Coding/GitHub/team-surg/sandbox/main.py",
+  "codePath": "sandbox/main.py",
+  "git": {
+    "remote": "https://github.com/lauren-pak/team-surg.git",
+    "commit": "7a234bbced5d33b2adb4ab005e3fbd498c2e973f"
+  },
+  "email": "miss.lauren.pak@gmail.com",
+  "root": "/Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results/abl_seq_pelvis_arm_head_thorax_spine_leg_weighted_seq_/wandb_test",
+  "host": "Laurens-MacBook-Air.local",
+  "executable": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+  "codePathLocal": "main.py"
+}

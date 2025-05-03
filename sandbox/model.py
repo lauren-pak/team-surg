@@ -7,7 +7,7 @@ from metrics import get_metrics_multiclass, get_metrics
 from dataset import MixerDataset
 import os 
 import pandas as pd
-import pickle5 as pickle 
+import pickle
 from net import MlpMixer
 import torch.nn as nn
 from dataset import MixerDataset
@@ -59,6 +59,7 @@ class MixerTask(pl.LightningModule):
         logits = self.forward(x) 
         loss = self.loss(logits, y.long())
         probs = torch.softmax(logits, dim=1)
+        breakpoint()
         return {'labels': y, 'logits': logits, 'probs': probs, 'val_loss': loss}
 
     def validation_epoch_end(self, outputs):
