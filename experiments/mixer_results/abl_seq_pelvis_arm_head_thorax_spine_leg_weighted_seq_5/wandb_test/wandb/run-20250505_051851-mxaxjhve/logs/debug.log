@@ -1,0 +1,25 @@
+2025-05-05 05:18:51,689 INFO    MainThread:5143 [wandb_setup.py:_flush():68] Current SDK version is 0.19.10
+2025-05-05 05:18:51,690 INFO    MainThread:5143 [wandb_setup.py:_flush():68] Configure stats pid to 5143
+2025-05-05 05:18:51,690 INFO    MainThread:5143 [wandb_setup.py:_flush():68] Loading settings from /Users/laurenpak/.config/wandb/settings
+2025-05-05 05:18:51,690 INFO    MainThread:5143 [wandb_setup.py:_flush():68] Loading settings from /Users/laurenpak/Desktop/Coding/GitHub/team-surg/sandbox/wandb/settings
+2025-05-05 05:18:51,690 INFO    MainThread:5143 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-05-05 05:18:51,691 INFO    MainThread:5143 [wandb_init.py:setup_run_log_directory():724] Logging user logs to /Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results/abl_seq_pelvis_arm_head_thorax_spine_leg_weighted_seq_5/wandb_test/wandb/run-20250505_051851-mxaxjhve/logs/debug.log
+2025-05-05 05:18:51,691 INFO    MainThread:5143 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to /Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results/abl_seq_pelvis_arm_head_thorax_spine_leg_weighted_seq_5/wandb_test/wandb/run-20250505_051851-mxaxjhve/logs/debug-internal.log
+2025-05-05 05:18:51,691 INFO    MainThread:5143 [wandb_init.py:init():852] calling init triggers
+2025-05-05 05:18:51,691 INFO    MainThread:5143 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-05-05 05:18:51,691 INFO    MainThread:5143 [wandb_init.py:init():893] starting backend
+2025-05-05 05:18:51,691 INFO    MainThread:5143 [wandb_init.py:init():897] sending inform_init request
+2025-05-05 05:18:51,730 INFO    MainThread:5143 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-05-05 05:18:51,730 INFO    MainThread:5143 [wandb_init.py:init():907] backend started and connected
+2025-05-05 05:18:51,735 INFO    MainThread:5143 [wandb_init.py:init():1002] updated telemetry
+2025-05-05 05:18:51,761 INFO    MainThread:5143 [wandb_init.py:init():1026] communicating run to backend with 90.0 second timeout
+2025-05-05 05:18:52,806 INFO    MainThread:5143 [wandb_init.py:init():1101] starting run threads in backend
+2025-05-05 05:18:52,903 INFO    MainThread:5143 [wandb_run.py:_console_start():2566] atexit reg
+2025-05-05 05:18:52,903 INFO    MainThread:5143 [wandb_run.py:_redirect():2414] redirect: wrap_raw
+2025-05-05 05:18:52,903 INFO    MainThread:5143 [wandb_run.py:_redirect():2483] Wrapping output streams.
+2025-05-05 05:18:52,903 INFO    MainThread:5143 [wandb_run.py:_redirect():2506] Redirects installed.
+2025-05-05 05:18:52,905 INFO    MainThread:5143 [wandb_init.py:init():1147] run started, returning control to user process
+2025-05-05 05:18:52,906 INFO    MainThread:5143 [wandb_run.py:_config_callback():1429] config_cb None None {'hp': 0}
+2025-05-05 05:18:53,182 INFO    MainThread:5143 [wandb_run.py:_config_callback():1429] config_cb None None {'save_dir': '/Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results', 'exp_name': 'abl_seq_pelvis_arm_head_thorax_spine_leg_weighted_seq_5', 'gpus': 1, 'pretrained': True, 'num_classes': 3, 'accelerator': 'auto', 'gradient_clip_val': 0.5, 'max_epochs': 100, 'patience': 50, 'limit_train_batches': 1.0, 'tb_path': '/Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results/tb', 'loss_fn': 'BCE', 'learn_rate': 0.0001, 'batch_size': 32, 'optimizer': 'Adam', 'dataset_path': './action_dataset_joints_leg_sampled_5.pkl', 'proj_name': 'team-surg', 'weight_decay': 0, 'embedd_dim': 84, 'seq_len': 5, 'num_mlp_blocks': 8, 'mlp_ratio': [0.5, 4.0], 'dropout_prob': 0.0, 'metrics_strategy': 'weighted', 'oversample': False}
+2025-05-05 05:18:53,412 INFO    MsgRouterThr:5143 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

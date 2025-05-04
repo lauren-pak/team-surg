@@ -1,0 +1,15 @@
+{"time":"2025-05-05T05:18:51.734309+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results/abl_seq_pelvis_arm_head_thorax_spine_leg_weighted_seq_5/wandb_test/wandb/run-20250505_051851-mxaxjhve/logs/debug-core.log"}
+{"time":"2025-05-05T05:18:52.143592+08:00","level":"INFO","msg":"created new stream","id":"mxaxjhve"}
+{"time":"2025-05-05T05:18:52.143667+08:00","level":"INFO","msg":"stream: started","id":"mxaxjhve"}
+{"time":"2025-05-05T05:18:52.143726+08:00","level":"INFO","msg":"handler: started","stream_id":"mxaxjhve"}
+{"time":"2025-05-05T05:18:52.143688+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"mxaxjhve"}
+{"time":"2025-05-05T05:18:52.144151+08:00","level":"INFO","msg":"sender: started","stream_id":"mxaxjhve"}
+{"time":"2025-05-05T05:18:52.807756+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-05T05:18:53.413786+08:00","level":"INFO","msg":"stream: closing","id":"mxaxjhve"}
+{"time":"2025-05-05T05:18:53.414507+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-05T05:18:53.414533+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-05T05:18:54.464532+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-05T05:18:54.801576+08:00","level":"INFO","msg":"handler: closed","stream_id":"mxaxjhve"}
+{"time":"2025-05-05T05:18:54.801657+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"mxaxjhve"}
+{"time":"2025-05-05T05:18:54.801709+08:00","level":"INFO","msg":"sender: closed","stream_id":"mxaxjhve"}
+{"time":"2025-05-05T05:18:54.801928+08:00","level":"INFO","msg":"stream: closed","id":"mxaxjhve"}

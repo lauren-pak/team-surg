@@ -1,0 +1,96 @@
+_wandb:
+    value:
+        cli_version: 0.19.10
+        m:
+            - "1": trainer/global_step
+              "6":
+                - 3
+              "7": []
+        python_version: 3.11.8
+        t:
+            "1":
+                - 1
+                - 5
+                - 9
+                - 41
+                - 49
+                - 53
+                - 55
+                - 63
+                - 103
+            "2":
+                - 1
+                - 5
+                - 9
+                - 41
+                - 49
+                - 53
+                - 55
+                - 63
+                - 103
+            "3":
+                - 7
+                - 13
+                - 23
+                - 55
+                - 66
+            "4": 3.11.8
+            "5": 0.19.10
+            "8":
+                - 5
+            "12": 0.19.10
+            "13": darwin-arm64
+accelerator:
+    value: auto
+batch_size:
+    value: 32
+dataset_path:
+    value: ./action_dataset_joints_leg_sampled_5.pkl
+dropout_prob:
+    value: 0
+embedd_dim:
+    value: 84
+exp_name:
+    value: abl_seq_pelvis_arm_head_thorax_spine_leg_weighted_seq_5
+gpus:
+    value: 1
+gradient_clip_val:
+    value: 0.5
+hp:
+    value: 0
+learn_rate:
+    value: 0.0001
+limit_train_batches:
+    value: 1
+loss_fn:
+    value: BCE
+max_epochs:
+    value: 100
+metrics_strategy:
+    value: weighted
+mlp_ratio:
+    value:
+        - 0.5
+        - 4
+num_classes:
+    value: 3
+num_mlp_blocks:
+    value: 8
+optimizer:
+    value: Adam
+oversample:
+    value: false
+patience:
+    value: 50
+pretrained:
+    value: true
+proj_name:
+    value: team-surg
+save_dir:
+    value: /Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results
+seq_len:
+    value: 5
+tb_path:
+    value: /Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results/tb
+weight_decay:
+    value: 0

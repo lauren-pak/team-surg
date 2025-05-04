@@ -62,7 +62,7 @@ class MixerTask(pl.LightningModule):
         breakpoint()
         return {'labels': y, 'logits': logits, 'probs': probs, 'val_loss': loss}
 
-    def validation_epoch_end(self, outputs):
+    def on_validation_epoch_end(self, outputs):
         """
         Aggregate and return the validation metrics
         Args:
@@ -95,7 +95,7 @@ class MixerTask(pl.LightningModule):
     def test_step(self, batch, batch_nb):
         return self.validation_step(batch, batch_nb) 
 
-    def test_epoch_end(self, outputs):
+    def on_test_epoch_end(self, outputs):
         avg_loss = torch.stack([batch['val_loss'] for batch in outputs]).mean()
         labels = torch.cat([batch['labels'] for batch in outputs])
         logits = torch.cat([batch['logits'] for batch in outputs])
