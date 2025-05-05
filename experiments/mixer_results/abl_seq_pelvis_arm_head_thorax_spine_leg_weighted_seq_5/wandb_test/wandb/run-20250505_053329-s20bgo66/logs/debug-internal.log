@@ -1,0 +1,15 @@
+{"time":"2025-05-05T05:33:29.160536+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/Users/laurenpak/Desktop/Coding/GitHub/team-surg/experiments/mixer_results/abl_seq_pelvis_arm_head_thorax_spine_leg_weighted_seq_5/wandb_test/wandb/run-20250505_053329-s20bgo66/logs/debug-core.log"}
+{"time":"2025-05-05T05:33:29.578876+08:00","level":"INFO","msg":"created new stream","id":"s20bgo66"}
+{"time":"2025-05-05T05:33:29.578927+08:00","level":"INFO","msg":"stream: started","id":"s20bgo66"}
+{"time":"2025-05-05T05:33:29.579088+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"s20bgo66"}
+{"time":"2025-05-05T05:33:29.579221+08:00","level":"INFO","msg":"sender: started","stream_id":"s20bgo66"}
+{"time":"2025-05-05T05:33:29.579304+08:00","level":"INFO","msg":"handler: started","stream_id":"s20bgo66"}
+{"time":"2025-05-05T05:33:30.208519+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-05T05:34:46.716753+08:00","level":"INFO","msg":"stream: closing","id":"s20bgo66"}
+{"time":"2025-05-05T05:34:46.717835+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-05T05:34:46.71829+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-05T05:34:48.298394+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-05T05:34:49.628353+08:00","level":"INFO","msg":"handler: closed","stream_id":"s20bgo66"}
+{"time":"2025-05-05T05:34:49.628706+08:00","level":"INFO","msg":"sender: closed","stream_id":"s20bgo66"}
+{"time":"2025-05-05T05:34:49.628745+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"s20bgo66"}
+{"time":"2025-05-05T05:34:49.629332+08:00","level":"INFO","msg":"stream: closed","id":"s20bgo66"}
